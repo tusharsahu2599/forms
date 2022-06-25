@@ -445,16 +445,15 @@ const Form = () => {
 
           <div className="response-body">
             <h4>Business Stage :</h4>
-            <p>
-              {name} is looking to {form.section} their business of{" "}
-              {form.primary_product}
+            <p>{form.section ? 
+              <p>{name} is looking to {form.section} their business of{" "} {form.primary_product}</p> : ""}
             </p>
             <h4>Age of Establishment :</h4>
             <p>
               {form.age_of_establishment <= 100 ? 
-            <p>This enterprise has been operational since ;
-            {   form.age_of_establishment} years and has been serving its
-            customers since then.</p> : "age should be less than 100"
+            <p>This enterprise has been operational since {" "}
+            {form.age_of_establishment} years and has been serving its
+            customers since then.</p> : "age should be less than 101"
             }
               
             </p>
